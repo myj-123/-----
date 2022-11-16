@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "微信小程序"
+  },
+  "sitemapLocation": "sitemap.json"
+}

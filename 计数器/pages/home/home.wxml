@@ -1,0 +1,13 @@
+<view class="home">
+  <view>计数器案例:{{count}}</view>
+  <!-- 微信小程序给元素绑定事件 @->v-on
+     wx:for
+     wx:if
+     wx:key
+     wx:for-item
+     wx:for-index
+     bindtap:给元素绑定点击事件,事件是冒泡的
+   -->
+  <button bindtap="add">加1</button>
+  <button bindtap="minus">减1</button>
+</view>

@@ -1,0 +1,14 @@
+<view class="detail">
+<view wx:for="{{arr}}" wx:for-item="shuaige" wx:for-index="daxiong" wx:key="daxiong">
+<text>数组当中每一个元素：{{shuaige}}   {{daxiong}}</text>
+</view>
+<view wx:if="{{show}}">
+<text>测试wx:if</text>
+</view>
+<view wx:else>
+<text>测试wx:else</text>
+</view>
+<view hidden="{{true}}">
+我是全部组件的属性hidden
+</view>
+</view>

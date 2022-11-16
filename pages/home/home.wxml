@@ -1,0 +1,5 @@
+<view class="home">
+    <image bindtap="goDetail" src="{{avatarUrl?avatarUrl:'../../static/1.png'}}" class="avatar"></image>
+    <text class="nickName">{{nickName?nickName:'用户未登录'}}</text>
+    <button class="login" bindtap="getUserInfo">获取用户信息</button>
+</view>

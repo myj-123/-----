@@ -33,7 +33,6 @@ Page({
     wx.navigateTo({
       url: '/pages/detail/detail?a=1&b=2&c=3',
       success:()=>{
-         console.log(1);
       }
     })
   },
@@ -52,7 +51,7 @@ Page({
   * 生命周期函数--监听页面加载
   */
  onLoad(options) {
-
+console.log('页面钩子onload：监听页面加载',options);
  },
 
  /**

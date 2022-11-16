@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+//options：页面跳转时携带的query参数
   },
 
   /**

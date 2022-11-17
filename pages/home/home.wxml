@@ -38,38 +38,137 @@
     </view>
   </view>
   <!-- 推荐歌曲 -->
-  <view class="home_music">
-       <view class="top">推荐歌曲</view>
-       <view class="bottom">
-          <text>为您精心推荐</text>
-          <button>查看更多</button>
-       </view>
-  </view>
-  <!--滚动视图容器-->
+  <NavHeader title="推荐歌曲" subTitle="为您精心推荐"></NavHeader>
+  <!-- 滚动视图展示推荐歌曲 -->
+  <!-- 滚动视图容器 -->
   <scroll-view class="home_scroll_music" enable-flex scroll-x>
-  <view class="item"> 
-    <image src="../../static/images/j20.png" class="img"></image>
-    <text class="title">大雄</text>
-  </view>
-  <view class="item">
-        <image src="../../static/images/j20.png" class="img"></image>
-        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
-     </view>
-     <view class="item">
-        <image src="../../static/images/j20.png" class="img"></image>
-        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
-     </view>
-     <view class="item">
-        <image src="../../static/images/j20.png" class="img"></image>
-        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
-     </view>
-     <view class="item">
-        <image src="../../static/images/j20.png" class="img"></image>
-        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
-     </view>
-     <view class="item">
-        <image src="../../static/images/j20.png" class="img"></image>
-        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
-     </view>
+    <view class="item">
+      <image src="../../static/images/j20.png" class="img"></image>
+      <text class="title">豪哥</text>
+    </view>
+    <view class="item">
+      <image src="../../static/images/j20.png" class="img"></image>
+      <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+    </view>
+    <view class="item">
+      <image src="../../static/images/j20.png" class="img"></image>
+      <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+    </view>
+    <view class="item">
+      <image src="../../static/images/j20.png" class="img"></image>
+      <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+    </view>
+    <view class="item">
+      <image src="../../static/images/j20.png" class="img"></image>
+      <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+    </view>
+    <view class="item">
+      <image src="../../static/images/j20.png" class="img"></image>
+      <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+    </view>
   </scroll-view>
+  <NavHeader title="排行榜" subTitle="热歌风向标"></NavHeader>
+  <!-- 五大类歌曲排行结构 -->
+  <swiper class="songRank" circular 	previous-margin="50px" 	next-margin="50px">
+    <swiper-item>
+      <view class="rank">
+        <view class="rankName">新歌榜</view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="rank">
+        <view class="rankName">新歌榜</view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="rank">
+        <view class="rankName">新歌榜</view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="rank">
+        <view class="rankName">新歌榜</view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="rank">
+        <view class="rankName">新歌榜</view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+        <view class="rankSort">
+          <image src="../../static/images/j20.png" class="img"></image>
+          <text class="number">1</text>
+          <text class="title">黑蝴蝶</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
 </view>

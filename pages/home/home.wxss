@@ -50,61 +50,61 @@
   margin-top: 10rpx;
 }
 
-.home .home_music {
-  width: 750rpx;
-  padding: 20rpx;
+
+/* 推荐歌曲滚动视图的样式 
+ scroll-view务必要有一个固定的高度
+ 默认书写flex布局不好使
+ scroll-view默认设置display:flex不好使
+ 需要通过	enable-flex 开启滚动视图的flex布局
+*/
+.home .home_scroll_music{
+    display: flex;
+    width: 750rpx;
+    height: 300rpx;
 }
 
-.home .home_music .top {
-  color: #ccc;
-}
-
-.home .home_music .bottom {
-  display: flex;
-  /* 水平对齐方式 */
-  justify-content: space-between;
-  /* 垂直轴对齐方式 */
-  align-items: center;
-  margin-top: 10rpx;
-}
-
-/* 默认button组件有默认margin 90px|padding 14px */
-.home .home_music .bottom button {
-  margin: 0;
-  padding: 0;
-  width: 160rpx;
-  height: 60rpx;
-  border-radius: 40rpx;
-  border: 2rpx solid black;
-  font-size: 24rpx;
-  margin: 0rpx 40rpx;
-}
-
-/*推荐歌曲滚动视图样式*/
-.home .home_scroll_music {
-  display: flex;
-  width: 750rpx;
-  height: 300rpx;
-}
-
-.home .home_scroll_music .img {
+.home .home_scroll_music .img{
   width: 200rpx;
   height: 200rpx;
   border-radius: 20rpx;
 }
-
-.home .home_scroll_music .item {
-  margin: 0px 10rpx;
+.home .home_scroll_music .item{
+   margin: 0px 10rpx;
 }
-
-.home .home_scroll_music .item .title {
+.home .home_scroll_music .item .title{
   font-size: 24rpx;
   width: 200rpx;
   height: 68rpx;
   /* 设置自多两行，超出部分... */
-  display: -webkit-box;
+  display:-webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* 五大类排行的样式 */
+.home .songRank{
+  width: 750rpx;
+  /* 高度由子元素撑开 */
+  height: 450rpx;
+}
+.home .songRank .rank{
+  width: 90%;
+  height:450rpx;
+  background: #eee;
+  padding: 20rpx;
+}
+.home .songRank .rank .img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+}
+.home .songRank .rank .rankSort{
+  margin: 20rpx 0rpx;
+  display: flex;
+  align-items: center;
+}
+.home .songRank .rank .rankSort .number{
+  margin: 0rpx 40rpx;
 }

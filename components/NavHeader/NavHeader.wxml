@@ -1,0 +1,7 @@
+<view class="home_music">
+  <view class="top">{{title}}</view>
+  <view class="bottom">
+    <text>{{subTitle}}</text>
+    <button bindtap="more">查看更多</button>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+.home_music {
+  width: 750rpx;
+  padding: 20rpx;
+}
+
+ .home_music .top {
+  color: #ccc;
+}
+
+ .home_music .bottom {
+  display: flex;
+  /* 水平对齐方式 */
+  justify-content: space-between;
+  /* 垂直轴对齐方式 */
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+/* 默认button组件有默认margin 90px|padding 14px */
+.home_music .bottom button {
+  margin: 0;
+  padding: 0;
+  width: 160rpx;
+  height: 60rpx;
+  border-radius: 40rpx;
+  border: 2rpx solid black;
+  font-size: 24rpx;
+  margin: 0rpx 40rpx;
+}

@@ -1,5 +1,75 @@
 <view class="home">
-    <image bindtap="goDetail" src="{{avatarUrl?avatarUrl:'../../static/1.png'}}" class="avatar"></image>
-    <text class="nickName">{{nickName?nickName:'用户未登录'}}</text>
-    <button class="login" bindtap="getUserInfo">获取用户信息</button>
+  <!-- swiper组件:轮播图 -->
+  <swiper class="home_banner" indicator-dots="true" indicator-color="#d43c33" indicator-active-color="white" autoplay="true" circular="true" interval="1000">
+    <swiper-item>
+      <image src="../../static/images/j20.png" class="banner"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../static/images/j20.png" class="banner"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../static/images/j20.png" class="banner"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../static/images/j20.png" class="banner"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 每日推荐的结构 -->
+  <view class="home_recommend">
+    <view class="item">
+      <text class="icon iconfont icon-dianzan"></text>
+      <text class="title">每日推荐</text>
+    </view>
+    <view class="item">
+      <text class="icon iconfont icon-gedan"></text>
+      <text class="title">歌单</text>
+    </view>
+    <view class="item">
+      <text class="icon iconfont icon-icon-ranking"></text>
+      <text class="title">排行</text>
+    </view>
+    <view class="item">
+      <text class="icon iconfont icon-diantai"></text>
+      <text class="title">电台</text>
+    </view>
+    <view class="item">
+      <text class="icon iconfont icon-zhiboguankanliangbofangsheyingshexiangjixianxing"></text>
+      <text class="title">直播</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲 -->
+  <view class="home_music">
+       <view class="top">推荐歌曲</view>
+       <view class="bottom">
+          <text>为您精心推荐</text>
+          <button>查看更多</button>
+       </view>
+  </view>
+  <!--滚动视图容器-->
+  <scroll-view class="home_scroll_music" enable-flex scroll-x>
+  <view class="item"> 
+    <image src="../../static/images/j20.png" class="img"></image>
+    <text class="title">大雄</text>
+  </view>
+  <view class="item">
+        <image src="../../static/images/j20.png" class="img"></image>
+        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+     </view>
+     <view class="item">
+        <image src="../../static/images/j20.png" class="img"></image>
+        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+     </view>
+     <view class="item">
+        <image src="../../static/images/j20.png" class="img"></image>
+        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+     </view>
+     <view class="item">
+        <image src="../../static/images/j20.png" class="img"></image>
+        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+     </view>
+     <view class="item">
+        <image src="../../static/images/j20.png" class="img"></image>
+        <text class="title">我爱你我的祖国,我是祖国的老花骨朵,我们都是祖国的未来(不能躺平)</text>
+     </view>
+  </scroll-view>
 </view>

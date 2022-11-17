@@ -1,0 +1,41 @@
+.home {
+  width: 100%;
+  height: 100%;
+  background: yellowgreen;
+  /* 开启弹性盒 */
+  display: flex;
+  /* 竖着排列 */
+  flex-direction: column;
+  /* 垂直居中 */
+  align-items: center;
+  /* 水平居中 */
+  justify-self: center;
+}
+
+/* 微信小程序适配单位rpx,原型图标记多大，你就写多大
+   iphone6->其他的设备就不需要管理，自动自适应
+   标准原型换算比例:
+   iphone6   1px ===2rpx
+   微信小程序适配不要书写百分比
+*/
+.avatar {
+  margin-top: 100rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.nickName {
+  margin: 100rpx 0rpx;
+  width: 200rpx;
+  height: 60rpx;
+  color: #eee;
+  text-align: center;
+}
+
+.login {
+  width: 280rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  color: #ccc;
+}

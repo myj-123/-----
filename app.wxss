@@ -1,4 +1,11 @@
+/* 整个应用的全局样式 */
+/* 
+ 引入阿里图标库的wxss样式，变为全局样式 
+  阿里图标库在使用的时候务必iconfont类名
+*/
+@import './static/iconfont/iconfont.wxss';
 page{
   width: 100%;
   height: 100%;
 }
+

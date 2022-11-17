@@ -1,17 +1,8 @@
 <view class="home">
   <!-- swiper组件:轮播图 -->
   <swiper class="home_banner" indicator-dots="true" indicator-color="#d43c33" indicator-active-color="white" autoplay="true" circular="true" interval="1000">
-    <swiper-item>
-      <image src="../../static/images/j20.png" class="banner"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="../../static/images/j20.png" class="banner"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="../../static/images/j20.png" class="banner"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="../../static/images/j20.png" class="banner"></image>
+    <swiper-item wx:for="{{banners}}" wx:key="{{item.encodeId}}">
+      <image src="{{item.pic}}" class="banner"></image>
     </swiper-item>
   </swiper>
   <!-- 每日推荐的结构 -->

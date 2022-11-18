@@ -1,4 +1,4 @@
-// pages/center/center.js
+// pages/login/login.js
 Page({
 
   /**
@@ -13,15 +13,6 @@ Page({
    */
   onLoad(options) {
 
-  },
-  
-  //点击头像跳转到登录页面
-  login(){
-      //tabbar页面个人中心->跳转到并非tabbar页面login
-      //问题:能否使用wx.navigateTo|redirectTo?
-      wx.navigateTo({
-        url: '/pages/login/login',
-      })
   },
 
   /**

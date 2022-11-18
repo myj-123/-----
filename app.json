@@ -3,7 +3,8 @@
     "pages/home/home",
     "pages/video/video",
     "pages/center/center",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/login/login"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
@@ -11,7 +12,8 @@
     "navigationBarTitleText": "硅谷云音乐"
   },
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "/static/images/tabs/home.png",

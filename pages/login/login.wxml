@@ -9,14 +9,15 @@
     <!-- 手机号码表单 -->
       <view class="input-item">
         <text class="tit">手机号码</text>
-        <input type="text" placeholder="请输入手机号码" />
+        <input type="text" placeholder="请输入手机号码" model:value="{{phone}}" />
       </view>
+      <!-- 密码表单元素 -->
       <view class="input-item">
         <text class="tit">密码</text>
-        <input type="password" placeholder="请输入密码"/>
+        <input type="text" placeholder="请输入密码" model:value="{{password}}"/>
       </view>
     </view>
-    <button class="confirm-btn">登录</button>
+    <button class="confirm-btn" bindtap="Userlogin">登录</button>
     <view class="forget-section">
       忘记密码?
     </view>

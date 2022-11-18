@@ -14,7 +14,7 @@
       <!-- 密码表单元素 -->
       <view class="input-item">
         <text class="tit">密码</text>
-        <input type="text" placeholder="请输入密码" model:value="{{password}}"/>
+        <input type="password" placeholder="请输入密码" model:value="{{password}}"/>
       </view>
     </view>
     <button class="confirm-btn" bindtap="Userlogin">登录</button>

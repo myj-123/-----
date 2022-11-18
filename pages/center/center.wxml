@@ -8,10 +8,10 @@
       <!--头像与用户名字的结构  -->
       <view class="portrait-box">
       <!-- 个人中心头像 -->
-        <image class="portrait" src="../../static/images/j20.png"></image>
+        <image class="portrait" src="{{avatar?avatar:'../../static/images/j20.png'}}"></image>
       </view>
       <view class="info-box">
-        <text class="username">豪哥</text>
+        <text class="username">{{nickName?nickName:'游客未登录'}}</text>
       </view>
     </view>
       <!-- vip卡片结构 -->

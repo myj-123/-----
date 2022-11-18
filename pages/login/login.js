@@ -1,12 +1,14 @@
-// pages/login/login.js
+import {
+  request
+} from '../../utils/request'
 Page({
   data: {
     //响应式数据收集收集号码与密码
     phone: '17720125002',
-    password: ''
+    password: 'Laojia1011%'
   },
   //登录按钮的回调
-  Userlogin() {
+  async Userlogin() {
     //点击登录按钮,发请求
     //发请求之前，先把表单元素的内容进行表单验证
     const {
@@ -57,8 +59,41 @@ Page({
       return;
     }
 
-    console.log(123);
+    //发起登录请求:接口
+    //如果登录成功->调回到个人中
+    //如果登录失败->提示信息
+    //发请求-进行登录
+    //由于网易云音乐人家登录接口不对外开发，导致咱们模拟登录
+    //let result = await request("/login/cellphone",{phone,password});
+    //如果登录成功
+    let result = {
+      code: 200,
+      profile: {
+        nickName: '豪哥很帅',
+        userId: "7958174368",
+        avatarUrl: 'https://p1.music.126.net/Qg2QJBskP1_uk52mxtLWHA==/109951167737474304.jpg'
+      },
+     
+    };
+    //如果登录成功跳转到个人中心tarbar页面
+    if (result.code == 200) {
+     //思考问题:login->tabbar页面center
+     //navigateTo|redirectTo:不能跳转到tabbar页面
+     //wx.reLaunch:关闭所有页面，打开到应用内的某个页面
 
+     //微信小程序本地存储技术:只要是应用的页面就可以共享本地存储的数据
+     //微信小程序本地存储上线10M
+      wx.setStorageSync('USER', result);
+      wx.reLaunch({
+        url: '/pages/center/center',
+      });
+    } else {
+      //登录失败错误提示新信息
+      wx.showToast({
+        title: '登录失败',
+        icon: 'error'
+      })
+    }
 
   }
 })

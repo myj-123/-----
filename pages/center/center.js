@@ -1,7 +1,9 @@
 //定义一个JS全局变量:全局变量可以在任意地方使用
 let startY = 0;
+import {
+  request
+} from '../../utils/request';
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -14,9 +16,10 @@ Page({
     //用户名字
     nickName: '',
     //用户登录成功以后ID
-    userId: ''
+    userId: '',
+    //存储用户最新听过歌曲
+    arr: []
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -31,10 +34,11 @@ Page({
         avatar: userInfo.profile.avatarUrl,
         nickName: userInfo.profile.nickName,
         userId: userInfo.profile.userId
-      })
+      });
+      //在获取用户最新听过歌曲->发请求
+      this.getUserMusic();
     }
   },
-
   //手指头触摸开始
   start(event) {
     //清除过渡动画
@@ -65,7 +69,6 @@ Page({
       transition: 'all .2s linear'
     })
   },
-
   //点击头像跳转到登录页面
   login() {
     //tabbar页面个人中心->跳转到并非tabbar页面login
@@ -79,52 +82,21 @@ Page({
     }
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  //获取用户最近听过哪些过去接口函数
+  async getUserMusic() {
+    //发请求获取用户最新听过哪些歌曲
+    //因为咱们的登录模拟的,userId,是从网易云音乐人家项目当中拷贝过来
+    //这个接口:除了需要携带userId、type参数之外。还有一个参数cookie
+    //cookie哪里来的?
+    //userId:去网易云音乐去找 
+    //cookie：去网易云音乐去找  自己的账号
+    let result = await request('/user/record', {
+      uid: this.data.userId,
+      type: 1
+    });
+    this.setData({
+      arr: result.weekData
+    })
   }
+
 })

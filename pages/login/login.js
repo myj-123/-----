@@ -69,20 +69,20 @@ Page({
     let result = {
       code: 200,
       profile: {
-        nickName: '豪哥很帅',
-        userId: "7958174368",
+        nickName: '青春',
+        userId: "415003333",
         avatarUrl: 'https://p1.music.126.net/Qg2QJBskP1_uk52mxtLWHA==/109951167737474304.jpg'
       },
-     
+
     };
     //如果登录成功跳转到个人中心tarbar页面
     if (result.code == 200) {
-     //思考问题:login->tabbar页面center
-     //navigateTo|redirectTo:不能跳转到tabbar页面
-     //wx.reLaunch:关闭所有页面，打开到应用内的某个页面
+      //思考问题:login->tabbar页面center
+      //navigateTo|redirectTo:不能跳转到tabbar页面
+      //wx.reLaunch:关闭所有页面，打开到应用内的某个页面
 
-     //微信小程序本地存储技术:只要是应用的页面就可以共享本地存储的数据
-     //微信小程序本地存储上线10M
+      //微信小程序本地存储技术:只要是应用的页面就可以共享本地存储的数据
+      //微信小程序本地存储上线10M
       wx.setStorageSync('USER', result);
       wx.reLaunch({
         url: '/pages/center/center',

@@ -92,8 +92,9 @@
 .home .songRank .rank{
   width: 90%;
   height:450rpx;
-  background: #eee;
+  background: rgb(169, 202, 171);
   padding: 20rpx;
+  color: rgb(82, 4, 34);
 }
 .home .songRank .rank .img{
   width: 100rpx;

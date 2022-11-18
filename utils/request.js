@@ -15,7 +15,7 @@ export const request = (url, data = {}, method = "get") => {
       method,
       success(res) {
         //成功返回成功的Promise对象
-        resolve(res.data);
+       resolve(res.data);
       },
       //请求失败
       fail(error){

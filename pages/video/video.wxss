@@ -1,1 +1,104 @@
-/* pages/video/video.wxss */
+.video{
+  width: 100%;
+  height: 100%;
+}
+.video .header{
+  width:750rpx;
+  height: 90rpx;
+  /* 开启弹性盒子:image、text */
+  display: flex;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.video .header .img{
+  width: 60rpx;
+  height: 50rpx;
+}
+.video .header input{
+  /* 左边右边图片wh写死,容器剩余的空间全部给中间文本框 */
+  flex:1;
+  border: 2rpx solid black;
+  margin: 0px 20rpx;
+}
+
+/* 个大类视频滚动视图的样式 */
+.video .scroll{
+   width: 750rpx;
+   height: 60rpx;
+   display: flex;
+}
+.video .scroll .item{
+  white-space: nowrap;
+  margin: 0px 20rpx;
+}
+.video .scroll .active{
+  border-bottom: 2rpx dashed yellowgreen;
+}
+
+/* 底部展示视频的滚动视图
+  如果将来有一天你们做数据大屏视频vw|vh
+  vw|vh
+*/
+.video .box{
+  width: 750rpx;
+  height:calc(100vh - 150rpx);
+}
+.video .box .showVideo{
+  display: block;
+  width: 90%;
+  height: 360rpx;
+  border-radius: 20rpx;
+  margin: 10rpx auto;
+}
+.video .box .img{
+  display: block;
+  width: 90%;
+  height: 360rpx;
+  border-radius: 20rpx;
+  margin: 10rpx auto;
+}
+.video .box .title{
+  font-size: 24rpx;
+  width: 400rpx;
+  padding-left: 30rpx;
+  display:-webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: yellowgreen;
+}
+
+/* 底部的品论、点赞样式 */
+.box .bottom{
+  padding: 10rpx 0px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  margin: 10rpx auto;
+  justify-content: space-between;
+  border-bottom: 1px dashed yellowgreen;
+}
+.box .item{
+  margin: 30rpx 0px;
+}
+.box .bottom .left .avatar{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.box .bottom .left{
+  display: flex;
+  align-items: center;
+}
+.box .bottom .left .nickName{
+  font-size: 24rpx;
+  color: yellowgreen;
+}
+
+.box .bottom .right text{
+  margin: 0px 10rpx;
+  font-size: 24rpx;
+  color:yellowgreen;
+}

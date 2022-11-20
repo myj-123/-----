@@ -1,2 +1,90 @@
-<!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
+<view class="video">
+  <!-- 头部搜索的地方 -->
+  <view class="header">
+    <image src="../../static/images/video/video.jpg" class="img"></image>
+    <!-- 自动聚焦:键盘会自动弹起 -->
+    <input type="text" placeholder="输入搜索关键字" placeholder-style="color:yellowgreen;font-size:24rpx" focus="{{true}}" />
+    <image src="../../static/images/favicon.ico" class="img"></image>
+  </view>
+  <!-- 
+     滚动视图:展示个大类视频标签类型
+     务必要有一定高度
+    -->
+  <scroll-view class="scroll" enable-flex scroll-x>
+    <view class="item active">
+      <text>现场直播</text>
+    </view>
+    <view class="item">
+      <text>游戏</text>
+    </view>
+    <view class="item">
+      <text>爱情</text>
+    </view>
+    <view class="item">
+      <text>直播</text>
+    </view>
+    <view class="item">
+      <text>财经</text>
+    </view>
+    <view class="item">
+      <text>经济</text>
+    </view>
+    <view class="item">
+      <text>军事</text>
+    </view>
+    <view class="item">
+      <text>故事</text>
+    </view>
+    <view class="item">
+      <text>现场直播</text>
+    </view>
+    <view class="item">
+      <text>游戏</text>
+    </view>
+    <view class="item">
+      <text>爱情</text>
+    </view>
+    <view class="item">
+      <text>直播</text>
+    </view>
+    <view class="item">
+      <text>财经</text>
+    </view>
+    <view class="item">
+      <text>经济</text>
+    </view>
+    <view class="item">
+      <text>军事</text>
+    </view>
+    <view class="item">
+      <text>故事</text>
+    </view>
+  </scroll-view>
+
+
+  <!-- 底部的结构:滚动视图,将来展示个大类的视频 
+     滚动视图务必要有一个固定高度
+  -->
+  <scroll-view class="box" scroll-y>
+     <view class="item" wx:for="{{10}}">
+        <!-- 视频标签 -->
+        <video class="showVideo" wx:if="{{fasle}}"></video>
+        <!-- 图片与视频一样大小 -->
+        <image src="../../static/images/j20.png" class="img" wx:else></image>
+        <view class="title">
+            我爱你祖国塞北的大雪我爱你祖国塞北的大雪
+        </view>
+        <view class="bottom">
+            <view class="left">
+              <image src="../../static/images/j20.png" class="avatar"></image>
+               <text class="nickName">豪哥</text>
+            </view>
+            <view class="right">
+               <text class="iconfont icon-buoumaotubiao15">123</text>
+               <text class="iconfont icon-pinglun1">456</text>
+               <text class="iconfont icon-gengduo"></text>
+            </view>
+        </view>
+     </view>
+  </scroll-view>
+</view>

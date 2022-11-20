@@ -1,4 +1,3 @@
-
 <view class="video">
   <!-- 头部搜索的地方 -->
   <view class="header">
@@ -23,26 +22,21 @@
   <!-- 展示视频的地方 -->
   <scroll-view class="box" scroll-y>
      <view class="item" wx:for="{{songArr}}" wx:key="{{item.vid}}">
-        <!-- 视频标签 -->
-        <video autoplay="{{true}}" class="showVideo"  object-fit="fill" wx:if="{{videoId===item.vid}}" src="{{item.url}}"></video>
-        <!-- 图片与视频一样大小 -->
-        <image src="{{item.imgUrl}}" class="img" wx:else  data-videoId="{{item.vid}}" bindtap="changeVideoId"></image>
-         <!-- 歌曲标题 -->
-        <view class="title">
-            {{item.title}}
-        </view>
-         <!-- 歌曲作者:点赞、分享结构 -->
-        <view class="bottom">
-            <view class="left">
-              <image src="{{item.avatarUrl}}" class="avatar"></image>
-               <text class="nickName">{{item.nickName}}</text>
-            </view>
-            <view class="right">
-               <text class="iconfont icon-buoumaotubiao15">{{item.praisedCount}}</text>
-               <text class="iconfont icon-pinglun1">{{item.commentCount}}</text>
-               <text class="iconfont icon-gengduo"></text>
-            </view>
-        </view>
+        <video  
+         class="showVideo" 
+         object-fit="fill" 
+         wx:if="{{videoId===item.vid}}" 
+         id="{{item.vid}}"
+         data-videoId="{{item.vid}}"
+         bindtap="changeVideoId"
+         src="{{item.url}}">
+        </video>
+        <image 
+        src="{{item.imgUrl}}" 
+        class="img" wx:else  
+        data-videoId="{{item.vid}}" 
+        bindtap="changeVideoId">
+      </image>
      </view>
   </scroll-view>
 </view>
